@@ -35,7 +35,7 @@ header {
 }
 
 .menu {
-    display: flex;
+  display: flex;
   justify-content: center;
 }
 nav ul {
@@ -58,15 +58,59 @@ nav a {
   width: 100%;
   display: none;
   background: var(--cor-gradiente-primaria); /* roxo + rosa */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   border: none;
   font-size: 30px;
   cursor: pointer;
   align-items: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 }
 
-/* No mobile: mostrar menu-toggle e alinhar ao lado da logo */
+
+.menu ul li {
+  position: relative; /* necessário para posicionar o submenu */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #AD246A;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Submenu escondido inicialmente */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* aparece logo abaixo */
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+/* Mostra o submenu ao passar o mouse sobre o <li> pai */
+.menu ul li:hover > .submenu {
+  display: block;
+}
+
+/* Estilo dos links dentro do submenu */
+.submenu li a {
+  padding: 8px 20px;
+  display: block;
+  color: #5B2C91;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: #f3e8ff;
+}
+
 @media (max-width: 768px) {
   .header-top {
     flex-direction: row;
@@ -76,22 +120,18 @@ nav a {
       background: linear-gradient(135deg, #c084fc 35%, #f472b6 67%, white 91%); /* roxo + rosa */
   }
 
-nav.menu {
-  display: flex;
-  gap: 20px;
-}
-.logo-container {
-  grid-template-columns: 2fr 1fr; /* 50% + 50% */
-  margin-bottom: 1rem;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  .logo-container {
+    grid-template-columns: 2fr 1fr; /* 50% + 50% */
+    margin-bottom: 1rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 
-}
-.logo {
-  font-size: 2rem;
-  max-width: 100%
-}
+  }
+  .logo {
+    font-size: 2rem;
+    max-width: 100%
+  }
 
 }
 
@@ -101,14 +141,14 @@ nav.menu {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    font-size: 40px; /* maior ícone no mobile */
+    font-size: 40px;
   }
 
   nav.menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%; /* exatamente após o header */
+
+    top: 100%;
     left: 0;
     width: 100%;
     background: white;
@@ -122,14 +162,33 @@ nav.menu {
     display: flex;
   }
 
-  nav.menu ul {
+  nav.menu > ul {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
+
+  .submenu {
+    display: none;
+  }
+
+  .menu li.open .submenu {
+    display: block;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    display: block;
+  }
 }
 
-nav.menu ul {
+
+nav.menu > ul {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -150,4 +209,24 @@ nav ul li a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .submenu {
+    display: none;
+  }
+
+  .menu li.open .submenu {
+    display: block;
+  }
+
+  .menu ul {
+    width: 100%;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
 }
