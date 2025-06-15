@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('/font/ShowcaseSans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'logo';
+  src: url('/font/Sweet\ Candy\ Pink.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

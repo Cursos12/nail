@@ -1,0 +1,115 @@
+/* Container principal dos mini blogs: centraliza e organiza em linha */
+.miniblog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Seção do blog: fundo colorido e padding */
+.blog-section {
+    position: relative;
+    padding: 0.4rem 1rem 1rem;
+    background-color: #fff0f6;
+}
+
+
+/* Barra superior decorativa usando ::before */
+.blog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: var(--cor-gradiente-secudaria);
+}
+
+/* Título centralizado e estilizado */
+.blog-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* Grid de cards do blog: flexível e centralizado */
+.blog-grid {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card individual do blog: fundo branco, sombra, padding e efeito hover */
+.blog-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 0rem 1rem 1rem 1rem;
+    box-shadow: 0 2px 8px rgba(214, 51, 132, 0.267);
+    transition: transform 0.3s ease;
+    width: 250px;
+    height: 200px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Data do blog: fonte menor e cor cinza */
+.blog-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Título do card: negrito e espaçamento */
+.blog-card-title {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.2rem;
+    margin-top: 0; /* Garante que não há margin-top */
+    padding-top: 0; /* Garante que não há padding-top */
+}
+
+
+/* Descrição do blog: cor mais suave */
+.blog-description {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Link do blog: cor roxa e destaque no hover */
+.blog-link {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #c084fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+.blog-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-grid .blog-card:nth-child(n+4) {
+    display: none;
+  }
+}

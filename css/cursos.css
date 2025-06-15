@@ -1,0 +1,248 @@
+.curso-destaque {
+  max-width: 800px; /* Largura máxima do modal */
+  background: linear-gradient(to bottom, #f8a9c4 30%, white 70%);
+  border-radius: 12px;
+  padding: 25px; /* Espaçamento interno */
+  box-shadow: 0 5px 25px rgba(248, 169, 196, 0.6);
+  position: fixed; /* Fixa o modal na tela */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%) scale(0.7); /* Começa reduzido */
+  min-height: 400px; /* Altura mínima para o modal */
+  z-index: 1000; /* Garante que o modal fique acima de outros elementos */
+  opacity: 0; /* Começa invisível */
+  display: flex;  /* Flexbox para centralizar conteúdo */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Curva de animação suave */
+  pointer-events: none; /* Desativa interação enquanto invisível */
+}
+
+.curso-destaque.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto; /* Reativa interação quando visível */
+  animation: none; /* Remove qualquer animação prévia */
+}
+
+/* Adicione isso para o overlay */
+.overlay {
+  position: fixed; /* Fixa o overlay na tela */
+  top: 0; /* Preenche toda a tela */
+  left: 0; /* Preenche toda a tela */
+  right: 0; /* Preenche toda a tela */
+  bottom: 0; /* Preenche toda a tela */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999; /* Garante que o overlay fique acima de outros elementos */
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+  pointer-events: none; /* Desativa interação enquanto invisível */
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animações personalizadas (opcional) */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Se quiser usar a animação keyframes em vez de transition */
+.curso-destaque.visible-with-animation {
+  animation: zoomIn 0.4s forwards;
+}
+
+/* Grid de Cursos */
+.grid-cursos {
+  max-width: 1220px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 0 auto; /* Centraliza o grid horizontalmente */
+}
+
+/* Estilos dos Cards Normais */
+.card-container {
+  background: linear-gradient(to bottom, #c084fc 5%, #f472b6 20%, white 32%);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-pai {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pai img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid white;
+
+}
+.card-pai h2 {
+  margin: 15px 0 0;
+  font-size: 1.3rem;
+  font-family: 'montserrat', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.card-containerpai {
+  transform: translateY(-5px);
+  box-shadow: none;
+}
+
+.card-containerpai:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  text-align: center;
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid white;
+}
+
+
+
+.card-header h2 {
+  margin: 15px 0 0;
+  font-size: 1.3rem;
+  font-family: 'Clicker Script', cursive;
+  color: #333;
+}
+
+
+
+
+/* Botão Fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #ff6b81;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background: white;
+  color: #d9435b;
+  transform: rotate(90deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-cursos{
+    max-width: 2rem;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid-cursos{
+    max-width: 2rem;
+    max-width: 100vw;
+  }
+}
+
+/* Container do curso principal (imagem + título) */
+.curso-principal {
+  position: relative; /* Para o botão de fechar ficar absoluto */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Imagem dentro do modal */
+.curso-principal img {
+  max-width: 150px;       /* Largura máxima controlada */
+  height: auto;           /* Altura proporcional */
+  border-radius: 50%;     /* Se for estilo "avatar" */
+  display: block;         /* Remove espaços indesejados */
+  margin: 0 auto 15px;    /* Centraliza e dá espaçamento */
+}
+
+/* Cursos relacionados (grid) */
+.cursos-relacionados {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+/* Cards relacionados */
+.card-relacionado img {
+  width: 100%;           /* Ocupa todo o espaço do card */
+  max-height: 100px;     /* Altura máxima fixa */
+  object-fit: cover;     /* Evita distorção */
+  border-radius: 8px;
+}
+
+/* Estilo do botão "Inscreva-se" */
+.btn-inscreva {
+  background: var(--cor-gradiente-primaria); /* Usa o gradiente definido */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-inscreva:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

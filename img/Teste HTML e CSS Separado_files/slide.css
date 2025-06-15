@@ -1,0 +1,107 @@
+:root {
+  --swiper-navigation-size: 24px;
+}
+
+.custom-slider {
+  width: 100%;
+  max-width: 960px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+  }
+
+  .slide-content img, .text-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.slide-content {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 30px;
+  width: 100%;
+}
+
+
+.slide-content img {
+  width: 100%;
+  max-width: 400px; /* ou o limite desejado */
+  aspect-ratio: 16 / 9; /* ou 16/9 se quiser mais "widescreen" */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.text-box {
+  width: 50%;
+}
+
+.text-box h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.text-box p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #c084fc, #f472b6); /* roxo + rosa */
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(203, 114, 183, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(203, 114, 183, 0.4);
+  background: linear-gradient(135deg, #a855f7, #f472b6); /* muda levemente no hover */
+}
+
+
+/* Cor das setas (próximo e anterior) */
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 0; /* remove qualquer texto interno se houver */
+  color: purple !important; /* usa !important para sobrepor */
+}
+
+/* Cor das setas (próximo e anterior) */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: rgb(255, 141, 255) !important; /* usa !important para sobrepor */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+}
+
+

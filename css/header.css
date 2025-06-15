@@ -1,0 +1,137 @@
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0; /* você pode trocar a cor se quiser */
+}
+
+@media (max-width: 768px) {
+  header {
+    position: sticky; /* ou fixed */
+    top: 0;
+  }
+}
+
+.header-content {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.logo {
+  margin: 0;
+  padding: 0.4rem;
+  font-family: 'Clicker Script';
+  font-size: 3.5rem;
+  color: white;
+  background: linear-gradient(135deg, #c084fc, #f472b6); /* roxo + rosa */
+  border-radius: 1rem;
+  letter-spacing: 2px;
+  margin-right: 3rem;
+  max-width: 100%
+}
+.logo-container {
+  margin-bottom: 1rem;
+}
+
+.menu {
+    display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5B2C91;
+  font-weight: bold;
+}
+
+
+
+.menu-toggle {
+  width: 100%;
+  display: none;
+  background: var(--cor-gradiente-primaria); /* roxo + rosa */
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  align-items: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav.menu {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 40px; /* maior ícone no mobile */
+  }
+
+  nav.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* exatamente após o header */
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    border-bottom: 1px solid #eee;
+    z-index: 999;
+  }
+
+  nav.menu.active {
+    display: flex;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+nav.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+
+nav ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: var(--cor-gradiente-primaria); /* roxo + rosa */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+}

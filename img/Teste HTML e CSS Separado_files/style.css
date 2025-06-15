@@ -1,0 +1,368 @@
+/* ===================== */
+/* VARIÁVEIS GLOBAIS     */
+/* ===================== */
+
+/* Aqui você define variáveis de cor que podem ser reutilizadas no código. */
+/* Neste caso, uma cor em forma de gradiente que vai do roxo ao rosa. */
+:root {
+  --cor-gradiente-primaria: linear-gradient(135deg, #c084fc, #f472b6);
+  --cor-gradiente-secudaria: linear-gradient(135deg, #f472b6, #c084fc);
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* ===================== */
+/* TÍTULOS E TEXTOS      */
+/* ===================== */
+
+/* Estilo do título h1 que está dentro da div com classe "elogio" */
+.elogio h1 {
+  font-family: 'Montserrat', sans-serif; /* Fonte moderna */
+  font-size: 1.4rem;                     /* Tamanho da fonte */
+  background: var(--cor-gradiente-primaria); /* Usa a cor gradiente que criamos lá em cima */
+  -webkit-background-clip: text;         /* Aplica o fundo gradiente apenas no texto */
+  -webkit-text-fill-color: transparent;  /* Deixa o texto transparente para ver o fundo */
+  font-weight: bold;                     /* Deixa o texto em negrito */
+  margin-top: 2rem;                      /* Espaçamento acima do título */
+  text-align: center;                    /* Centraliza o texto */
+  text-transform: uppercase;             /* Coloca o texto em letras maiúsculas */
+}
+
+
+.curso-destaque {
+  max-width: 800px;
+  background: linear-gradient(to bottom, #f8a9c4 30%, white 70%);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(248, 169, 196, 0.6);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7); /* Começa reduzido */
+  min-height: 400px;
+  z-index: 1000;
+  opacity: 0; /* Começa invisível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Curva de animação suave */
+  pointer-events: none; /* Desativa interação enquanto invisível */
+}
+
+.curso-destaque.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto; /* Reativa interação quando visível */
+  animation: none; /* Remove qualquer animação prévia */
+}
+
+/* Adicione isso para o overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animações personalizadas (opcional) */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Se quiser usar a animação keyframes em vez de transition */
+.curso-destaque.visible-with-animation {
+  animation: zoomIn 0.4s forwards;
+}
+
+/* Grid de Cursos */
+.grid-cursos {
+  max-width: 1220px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 0 auto; /* Centraliza o grid horizontalmente */
+}
+
+/* Estilos dos Cards Normais */
+.card-container {
+  background: linear-gradient(to bottom, #c084fc 5%, #f472b6 20%, white 32%);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-pai {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pai img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid white;
+
+}
+.card-pai h2 {
+  margin: 15px 0 0;
+  font-size: 1.3rem;
+  font-family: 'montserrat', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.card-containerpai {
+  transform: translateY(-5px);
+  box-shadow: none;
+}
+
+.card-containerpai:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  text-align: center;
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid white;
+}
+
+
+
+.card-header h2 {
+  margin: 15px 0 0;
+  font-size: 1.3rem;
+  font-family: 'Clicker Script', cursive;
+  color: #333;
+}
+
+
+
+
+/* Botão Fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #ff6b81;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background: white;
+  color: #d9435b;
+  transform: rotate(90deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-cursos{
+    max-width: 2rem;
+  }
+}
+
+/* Container do curso principal (imagem + título) */
+.curso-principal {
+  position: relative; /* Para o botão de fechar ficar absoluto */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Imagem dentro do modal */
+.curso-principal img {
+  max-width: 150px;       /* Largura máxima controlada */
+  height: auto;           /* Altura proporcional */
+  border-radius: 50%;     /* Se for estilo "avatar" */
+  display: block;         /* Remove espaços indesejados */
+  margin: 0 auto 15px;    /* Centraliza e dá espaçamento */
+}
+
+/* Cursos relacionados (grid) */
+.cursos-relacionados {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+/* Cards relacionados */
+.card-relacionado img {
+  width: 100%;           /* Ocupa todo o espaço do card */
+  max-height: 100px;     /* Altura máxima fixa */
+  object-fit: cover;     /* Evita distorção */
+  border-radius: 8px;
+}
+
+/* Estilo do botão "Inscreva-se" */
+.btn-inscreva {
+  background: var(--cor-gradiente-primaria); /* Usa o gradiente definido */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-inscreva:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.miniblog{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+.container {
+    display: flex;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.blog-section {
+  position: relative;
+  padding: 0.4rem 1rem 1rem;
+  background-color: #fff0f6;
+}
+
+.blog-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: var(--cor-gradiente-secudaria); /* Aqui pode ser um gradiente */
+}
+
+.blog-title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(214, 51, 132, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.blog-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,42 @@
+
+:root {
+  --cor-gradiente-primaria: linear-gradient(135deg, #c084fc, #f472b6); 
+  --cor-gradiente-secudaria: linear-gradient(135deg, #f472b6, #c084fc); 
+  --cor-primaria: #c084fc; 
+  --cor-secundaria: #f472b6; 
+}---
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  margin: 0; /* Remove margens padrão do body */
+  padding: 20px;
+  color: #333;
+}
+
+
+.elogio h1 {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.4rem;                     
+  background: var(--cor-gradiente-primaria); /* Usa a cor gradiente que criamos lá em cima */
+  -webkit-background-clip: text;         /* Aplica o fundo gradiente apenas no texto */
+  -webkit-text-fill-color: transparent;  /* Deixa o texto transparente para ver o fundo */
+  font-weight: bold;                     
+  margin-top: 2rem;                      /* Espaçamento acima do título */
+  text-align: center;                    
+  text-transform: uppercase;             /* Coloca o texto em letras maiúsculas */
+}
+
+.container {
+    max-width: 1200px;
+    ;
+    display: flex;
+    flex-direction: column;
+    /* Um embaixo do outro */
+    align-items: center;
+    /* Centraliza na horizontal */
+    width: 100%;
+    margin: 1rem auto;
+}
+
+
+
