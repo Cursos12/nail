@@ -46,7 +46,7 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #FFA3C1;
+  color: #000000;
   transition: color 0.3s;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .social-icons a {
-  color: #FFA3C1;
+  color: #000000;
   font-size: 1.4rem;
   margin-right: 12px;
   transition: color 0.3s;
