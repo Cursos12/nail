@@ -54,6 +54,7 @@ body {
 /* Navegação por Abas */
 .tabs-nav {
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px;
 }
