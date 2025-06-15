@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teste HTML e CSS Separado</title>
   <link rel="stylesheet" href="/css/loading.css" />
+  <link rel="stylesheet" href="/css/cursodireto.css" />
   <link rel="stylesheet" href="/css/header.css" />
   <link rel="stylesheet" href="/css/font.css" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -32,9 +33,8 @@
  <header>
   <div class="logo-container">
     <h1 class="logo">A Criativa</h1>
+   <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
-
-  <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
 
   <nav class="menu">
     <ul>
@@ -93,121 +93,335 @@
   </div>
 
 
-  <div class="miniblog">
-    <div class="container">
-      <section class="blog-section">
-        <h2 class="blog-title">Nail</h2>
-          <div class="blog-grid">
-            <div class="blog-card">
-              <p class="blog-date">14 Jun 2025</p>
-              <h3 class="blog-card-title">Receita para CLAREAR unhas AMARELADA</h3>
-              <p class="blog-description">
-                Esfregar limão com bicarbonato pode ajudar a clarear as unhas...
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-            <div class="blog-card">
-              <p class="blog-date">12 Jun 2025</p>
-              <h3 class="blog-card-title">15 DICAS para FORTALECER sua unha</h3>
-              <p class="blog-description">
-                Utilize removedores de esmalte mais suaves e...
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-            <div class="blog-card">
-              <p class="blog-date">10 Jun 2025</p>
-              <h3 class="blog-card-title">Como fazer a unha crescer mais rápido</h3>
-              <p class="blog-description">
-                A alimentação rica em proteínas e vitaminas é essencial para o crescimento saudável das unhas...
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-            <div class="blog-card">
-              <p class="blog-date">08 Jun 2025</p>
-              <h3 class="blog-card-title">Como evitar que o esmalte descasque rápido</h3>
-              <p class="blog-description">
-                Aplicar uma base de qualidade e evitar contato excessivo com água ajuda a manter o esmalte por mais tempo.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-            <div class="blog-card">
-              <p class="blog-date">05 Jun 2025</p>
-              <h3 class="blog-card-title">Cuidados essenciais após alongamento de unhas</h3>
-              <p class="blog-description">
-                Hidratar as cutículas e evitar produtos agressivos prolongam a durabilidade do alongamento.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-            <div class="blog-card">
-              <p class="blog-date">02 Jun 2025</p>
-              <h3 class="blog-card-title">Tendências de nail art para 2025</h3>
-              <p class="blog-description">
-                Descubra as cores e estilos que vão bombar nas unhas este ano!
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-            </div>
-          </div>
 
-          <h2 class="blog-title">Atalhos</h2>
-          <div class="blog-grid">
-            <div class="blog-card">
-              <p class="blog-date">01 Jun 2025</p>
-              <h3 class="blog-card-title">Como criar um catálogo de serviços no Canva</h3>
-              <p class="blog-description">
-                Aprenda a usar o Canva para criar catálogos incríveis e atrativos para seus serviços.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
+  <div class="posts-container">
+        <!-- Post 1 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/06/negocio-desorganizado-descubra-como-virar-o-jogo-ainda-este-ano/"
+                target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2025/05/77651.jpg"
+                    alt="reunimos 5 dicas práticas para te ajudar a fazer uma autoavaliação e aproveitar os próximos meses com mais organização, foco e controle."
+                    class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/06/12/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>12 junho 2025</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="blog-card">
-              <p class="blog-date">28 Mai 2025</p>
-              <h3 class="blog-card-title">Dicas de marketing digital para empreendedoras</h3>
-              <p class="blog-description">
-                Descubra como usar as redes sociais para impulsionar seu negócio.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/06/negocio-desorganizado-descubra-como-virar-o-jogo-ainda-este-ano/"
+                    target="_blank">Negócio Desorganizado? Descubra Como Virar o Jogo Ainda Este Ano!</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                Agora que já estamos no meio do ano, é o momento ideal para fazer uma pausa e refletir: como anda seu
+                negócio? Os resultados estão como você esperava? Ou sente que pode e precisa melhorar?
+            </p>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/05/primeiros-passos-para-empreender-e-ter-sucesso/"
+                target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2024/06/22728-1.jpg"
+                    alt="Começar um negócio vai muito além de ter uma ideia e coragem para iniciar um empreendimento."
+                    class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item post-category">
+                        <span>
+                            <a href="https://blog.empresaria.online/category/servicos/">Para a prestadora de
+                                serviços</a>
+                        </span>
+                    </li>
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/05/21/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>21 maio 2025</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="blog-card">
-              <p class="blog-date">25 Mai 2025</p>
-              <h3 class="blog-card-title">Ferramentas essenciais para empreendedoras criativas</h3>
-              <p class="blog-description">
-                Conheça as ferramentas que podem facilitar sua rotina e aumentar sua produtividade.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/05/primeiros-passos-para-empreender-e-ter-sucesso/"
+                    target="_blank">Primeiros Passos para empreender e ter sucesso!</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                Para abrir sua empresa, você precisa ter em mente que será necessário muita dedicação e trabalho, e que
+                o dia a dia não será nada fácil. Administrar as finanças, controlar o estoque e lidar com problemas
+                operacionais são algumas das tarefas de um empreendedor.
+            </p>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/04/ja-fez-sua-declaracao-anual-do-mei/" target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2024/05/9727-1.jpg"
+                    alt="Facilite a Emissão do MEI" class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item post-category">
+                        <span>
+                            <a href="https://blog.empresaria.online/category/mei/">MEI</a>
+                        </span>
+                    </li>
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/04/17/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>17 abril 2025</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="blog-card">
-              <p class="blog-date">22 Mai 2025</p>
-              <h3 class="blog-card-title">Como precificar seus serviços de forma justa</h3>
-              <p class="blog-description">
-                Aprenda a calcular o valor do seu trabalho e a cobrar o que você merece.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/04/ja-fez-sua-declaracao-anual-do-mei/" target="_blank">Já
+                    fez sua Declaração Anual do MEI?</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                Se você é um empreendedor MEI e tem dúvidas sobre a declaração, não se preocupe! Iremos esclarecer os
+                principais pontos para que você realize o processo de forma correta, segura e sem complicações.
+            </p>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/04/plano-de-negocios-essencial-para-o-sucesso-e-crescimento-da-sua-empresa/"
+                target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2024/09/24893.jpg"
+                    alt="O Plano de negócios chega para trazer tudo o que você precisa saber de uma forma realista, reduzindo erros e trazendo insights importantes para o futuro do negócio"
+                    class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/04/09/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>09 abril 2025</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="blog-card">
-              <p class="blog-date">20 Mai 2025</p>
-              <h3 class="blog-card-title">Técnicas de vendas para empreendedoras iniciantes</h3>
-              <p class="blog-description">
-                Dicas práticas para melhorar suas habilidades de vendas e conquistar mais clientes.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/04/plano-de-negocios-essencial-para-o-sucesso-e-crescimento-da-sua-empresa/"
+                    target="_blank">Plano de Negócios: Essencial para o Sucesso e Crescimento da Sua Empresa</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                O plano de negócios é um documento estratégico que reúne informações essenciais sobre o mercado,
+                potenciais clientes, produtos e concorrentes, ajudando a avaliar a viabilidade da sua ideia e a realizar
+                ajustes necessários.
+            </p>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/03/veja-como-o-atendimento-automatizado-pode-transformar-seu-negocio/"
+                target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2024/08/push-chatbot-o-sienge-agora-e-integrado-ao-whatsapp-saiba-mais-1024x473.jpg.webp"
+                    alt="o uso de chatbots no WhatsApp é tão importante, pois resulta em maior alcance, melhor experiência de atendimento e suporte, automação dos serviços e, claro, a possibilidade de atendimento fora do horário convencional."
+                    class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/03/25/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>25 março 2025</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="blog-card">
-              <p class="blog-date">18 Mai 2025</p>
-              <h3 class="blog-card-title">Como criar uma marca pessoal forte</h3>
-              <p class="blog-description">
-                Descubra como construir uma imagem autêntica e atrativa para seu negócio.
-              </p>
-              <a href="#" class="blog-link">Saiba mais</a>
-          
-      </section>
-      <div class="cursos-container">
-        <section id="curso-selecionado" class="curso-destaque"></section>
-        <section id="profissao" class="grid-cursos"></section>
-      </div>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/03/veja-como-o-atendimento-automatizado-pode-transformar-seu-negocio/"
+                    target="_blank">Veja como o atendimento automatizado pode transformar seu negócio!</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                O uso de chatbots no WhatsApp é tão importante, pois resulta em maior alcance, melhor experiência de
+                atendimento e suporte, automação dos serviços e, claro, a possibilidade de atendimento fora do horário
+                convencional.
+            </p>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post-card">
+            <a href="https://blog.empresaria.online/2025/03/dicas-praticas-para-desenvolver-seu-negocio/"
+                target="_blank">
+                <img src="https://blog.empresaria.online/wp-content/uploads/2024/06/6704.jpg"
+                    alt="DICAS RÁPIDAS E PRÁTICAS PARA EMPREENDER" class="post-image">
+            </a>
+
+            <div class="post-meta">
+                <ul class="meta-list">
+                    <li class="meta-item post-category">
+                        <span>
+                            <a href="https://blog.empresaria.online/category/empresaria-online/">Empresária Online</a>
+                        </span>
+                    </li>
+                    <li class="meta-item">
+                        <a href="https://blog.empresaria.online/2025/03/18/">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>18 março 2025</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="post-title">
+                <a href="https://blog.empresaria.online/2025/03/dicas-praticas-para-desenvolver-seu-negocio/"
+                    target="_blank">Dicas Práticas para Desenvolver Seu Negócio</a>
+            </h3>
+
+            <p class="post-excerpt mobile-hidden">
+                Capacitar-se continuamente e seguir essas etapas aumentará significativamente suas chances de sucesso ao
+                desenvolver seu próprio negócio.
+            </p>
+        </div>
+    </div>
+
+   <div class="tabs-container">
+<h3 class="cursotitulo">Transforme seu talento em uma fonte de renda poderosa</h3>
+<h1 class="cursotitulo2">Aprenda as técnicas mais procuradas em unhas, sobrancelhas e estética. <br>transforme seu talento em lucro real</h1>
+
+  <nav class="tabs-nav">
+    <a href="#nail-design" class="active">Unhas</a>
+    <a href="#sobrancelhas">Sobrancelhas & Olhar</a>
+    <a href="#bem-estar">Estética Rápida</a>
+    <a href="#marketing">Marketing & Ferramentas</a>
+  </nav>
+
+  <!-- UNHAS -->
+  <div id="nail-design" class="tab-content active">
+  <div class="courses-wrapper">
+    <div class="course-card">
+      <h3>Alongamento em Gel Profissional – do Zero ao Avançado</h3>
+      <p>4.9 ★★★★★ (1.428 avaliações)</p>
+      <div class="course-price">R$ 49,90 <s>R$ 139,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Nail Art Lucrativa: Tendências e Técnicas Avançadas</h3>
+      <p>4.8 ★★★★★ (1.052 avaliações)</p>
+      <div class="course-price">R$ 39,90 <s>R$ 99,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Esmaltação em Gel Perfeita + Durabilidade de 21 Dias</h3>
+      <p>4.7 ★★★★☆ (978 avaliações)</p>
+      <div class="course-price">R$ 34,90 <s>R$ 79,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Manicure e Pedicure Profissional com Técnicas de Spa</h3>
+      <p>4.9 ★★★★★ (1.289 avaliações)</p>
+      <div class="course-price">R$ 29,90 <s>R$ 69,90</s></div>
     </div>
   </div>
+</div>
 
+  <!-- SOBRANCELHAS -->
+  <div id="sobrancelhas" class="tab-content">
+  <div class="courses-wrapper">
+    <div class="course-card">
+      <h3>Design de Sobrancelhas Profissional com Visagismo</h3>
+      <p>4.9 ★★★★★ (864 avaliações)</p>
+      <div class="course-price">R$ 39,90 <s>R$ 99,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Coloração e Henna para Sobrancelhas – Resultado Natural</h3>
+      <p>4.7 ★★★★☆ (745 avaliações)</p>
+      <div class="course-price">R$ 29,90 <s>R$ 79,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Lash Lifting + Brow Lamination Profissional</h3>
+      <p>4.8 ★★★★★ (689 avaliações)</p>
+      <div class="course-price">R$ 44,90 <s>R$ 109,90</s></div>
+    </div>
+  </div>
+</div>
 
+  <!-- ESTÉTICA RÁPIDA -->
+  <div id="bem-estar" class="tab-content">
+  <div class="courses-wrapper">
+    <div class="course-card">
+      <h3>Spa das Mãos e Pés: Lucre com Bem-Estar</h3>
+      <p>4.8 ★★★★★ (512 avaliações)</p>
+      <div class="course-price">R$ 24,90 <s>R$ 59,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Depilação Facial com Linha – Técnica Indiana</h3>
+      <p>4.6 ★★★★☆ (538 avaliações)</p>
+      <div class="course-price">R$ 19,90 <s>R$ 49,90</s></div>
+    </div>
+    <div class="course-card">
+      <h3>Massagem Relaxante Express – Atendimento em 20 Min</h3>
+      <p>4.7 ★★★★☆ (428 avaliações)</p>
+      <div class="course-price">R$ 29,90 <s>R$ 69,90</s></div>
+    </div>
+  </div>
+</div>
 
+<div id="marketing" class="tab-content">
+  <div class="courses-wrapper">
+    <div class="course-card">
+      <h3>Marketing para Manicures: Como Lotar sua Agenda com o Instagram</h3>
+      <p>4.9 ★★★★★ (1.032 avaliações)</p>
+      <div class="course-price">R$ 39,90 <s>R$ 119,90</s></div>
+    </div>
+
+    <div class="course-card">
+      <h3>Criação de Conteúdo com Celular: Fotos e Vídeos Profissionais</h3>
+      <p>4.8 ★★★★★ (876 avaliações)</p>
+      <div class="course-price">R$ 34,90 <s>R$ 89,90</s></div>
+    </div>
+
+    <div class="course-card">
+      <h3>Agendamento Online e WhatsApp Business: Automatize seu Atendimento</h3>
+      <p>4.7 ★★★★☆ (624 avaliações)</p>
+      <div class="course-price">R$ 29,90 <s>R$ 69,90</s></div>
+    </div>
+
+    <div class="course-card">
+      <h3>Branding para Profissionais da Beleza: Crie sua Marca Pessoal</h3>
+      <p>4.8 ★★★★★ (743 avaliações)</p>
+      <div class="course-price">R$ 36,90 <s>R$ 89,90</s></div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    // Ativação via JavaScript para melhor UX
+    document.querySelectorAll('.tabs-nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Remove classe active de todos
+        document.querySelectorAll('.tabs-nav a, .tab-content').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Adiciona classe active no item clicado
+        link.classList.add('active');
+        document.querySelector(link.getAttribute('href')).classList.add('active');
+      });
+    });
+  </script>
 
 
 </body>

@@ -19,7 +19,7 @@
 
 .footer-logo h2 {
   font-size: 1.8rem;
-  color: #d90bc3;
+  color: #AD246A;
   margin-bottom: 10px;
 }
 
@@ -37,7 +37,7 @@
 .footer-social h4 {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #5b2c91;
+  color: #AD246A;
 }
 
 .footer-links li {
@@ -46,7 +46,7 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #5b2c91;
+  color: #FFA3C1;
   transition: color 0.3s;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .social-icons a {
-  color: #5b2c91;
+  color: #FFA3C1;
   font-size: 1.4rem;
   margin-right: 12px;
   transition: color 0.3s;

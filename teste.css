@@ -1,0 +1,124 @@
+/* Reset e Estilos Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    /* Container das Abas */
+    .tabs-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navegação por Abas */
+    .tabs-nav {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .tabs-nav a {
+      padding: 12px 24px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border-bottom: 3px solid transparent;
+    }
+
+    .tabs-nav a:hover {
+      background: #f5f5f5;
+    }
+
+    .tabs-nav a.active {
+      border-bottom-color: #2d2f31;
+      color: #2d2f31;
+    }
+
+    /* Conteúdo das Abas */
+    .tab-content {
+      display: none;
+      padding: 15px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Cards de Cursos */
+    .course-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .course-price {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .course-price s {
+      color: #999;
+      margin-left: 8px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+      
+    }
+    .courses-wrapper {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+  padding-bottom: 1rem;
+}
+
+.course-card {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+}
+.course-card:hover {
+  transform: scale(1.02);
+}
+
+.course-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.course-price s {
+  color: #999;
+  margin-left: 8px;
+}
+
+@media (min-width: 376px) {
+  .course-card {
+    flex: 0 0 65%;
+  }
+}
+
+@media (min-width: 600px) {
+  .course-card {
+    flex: 0 0 calc((100% - 1.6rem) / 2);
+  }
+}
+
+@media (min-width: 700px) {
+  .course-card {
+    flex: 0 0 calc((100% - 3.2rem) / 3);
+  }
+}

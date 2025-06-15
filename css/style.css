@@ -26,6 +26,12 @@ body {
   text-transform: uppercase;             /* Coloca o texto em letras maiúsculas */
 }
 
+@media (max-width: 768px) {
+   .elogio h1{
+    font-size: 0.9rem;     
+   }
+  }
+
 .container {
     max-width: 1200px;
     ;
