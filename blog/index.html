@@ -1,87 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog | A Criativa</title>
 
   <!-- CSS -->
-<link rel="stylesheet" href="/css/header.css" />
-<link rel="stylesheet" href="/css/font.css" />
-<link rel="stylesheet" href="/css/style.css" />
-<link rel="stylesheet" href="/css/footer.css" />
-  
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/font.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/blog/css/quiz.css" />
+
   <!-- Swiper + FontAwesome + Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
 </head>
 <script src="/header-loader.js" defer></script>
 <script src="/js/menu.js" defer></script>
 <script src="/js/cursos.js" defer></script>
 <script src="/js/loading.js" defer></script>
+<script src="/blog/js/blog.js" defer></script>
+
 <body>
 
   <div id="header-placeholder"></div>
-   <div id="conteudo" style="display: none;">
-      <div id="carregando">Carregando...</div>
-<div id="conteudo" style="display: none;">
-  <!-- Conteúdo real -->
-</div>
-
-  <!-- Conteúdo principal do blog -->
-  <main class="blog-container">
-    <section class="blog-post">
-      <h2 class="post-title">5 Dicas para Empreender com Estilo</h2>
-      <p class="post-meta">Publicado em 13 de Junho de 2025 por <strong>A Criativa</strong></p>
-      <p class="post-excerpt">Descubra como alinhar criatividade e negócios com essas dicas práticas para mulheres empreendedoras modernas...</p>
-      <a href="#" class="read-more">Leia mais</a>
-    </section>
-
-    <section class="blog-post">
-      <h2 class="post-title">Tendências de Design para 2025</h2>
-      <p class="post-meta">Publicado em 10 de Junho de 2025</p>
-      <p class="post-excerpt">Quer manter sua marca atualizada? Veja as tendências que vão dominar o visual das empreendedoras criativas este ano...</p>
-      <a href="#" class="read-more">Leia mais</a>
-    </section>
-
-    <!-- Adicione mais posts conforme desejar -->
-  </main>
+  <div id="conteudo" style="display: none;">
+    <div id="carregando">Carregando...</div>
+    <div id="conteudo" style="display: none;">
     </div>
 
+    <div class="blog-meio">
+      <section class="blog-texto">
+        <h2>O Início de Uma Profissão de Alto Nível: O Que Está Por Trás do Trabalho de uma Nail Designer Profissional
+        </h2>
+        <p>Em um mercado onde cada detalhe importa, a profissional que trabalha com design de unhas deixou de ser vista
+          como “a moça do esmalte” e passou a ser reconhecida como uma especialista.
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <h2>A Criativa</h2>
-        <p>Estilo e criatividade para empreendedoras de sucesso.</p>
-      </div>
+          Ser Nail Designer não é apenas aprender a fazer unhas bonitas. É entender biomecânica da unha natural,
+          conhecer materiais químicos e suas interações, aplicar técnicas com precisão milimétrica e trabalhar com
+          higiene e biossegurança em todos os atendimentos.
 
-      <div class="footer-links">
-        <h4>Links rápidos</h4>
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </div>
+          Essa profissional atua com procedimentos como:
 
-      <div class="footer-social">
-        <h4>Redes sociais</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          Alongamento em gel, acrílico ou fibra de vidro, adaptados à estrutura da unha natural
+
+          Blindagem da lâmina ungueal, para fortalecer unhas frágeis
+
+          Técnicas de curvatura, nivelamento e simetria tridimensional
+
+          Uso de equipamentos como motor, cabine UV/LED e brocas específicas
+
+          Além da parte técnica, ela precisa desenvolver habilidades como:
+
+          Organização do espaço de trabalho
+
+          Controle de tempo e atendimento personalizado
+
+          Captação e fidelização de clientes
+
+          Para quem deseja ingressar nessa profissão, entender os fundamentos técnicos e éticos do Nail Designer é o
+          primeiro passo — não apenas para “aprender a fazer”, mas para profissionalizar o que já se ama fazer.
+
+          A seguir, propomos um pequeno quiz. Ele não é apenas um teste, mas um convite à reflexão sobre tudo que você
+          já sabe — e tudo que pode vir a dominar.
+
+          Se acertar, você terá acesso a um curso introdutório gratuito que mostra, passo a passo, como iniciar sua
+          formação com qualidade.</p>
+      </section>
+
+    </div>
+
+    <div class="contquiz">
+      <section class="quiz-instructions">
+        <h2>Como funciona o quiz?</h2>
+        <p>Responda às perguntas abaixo para testar seus conhecimentos sobre unhas e técnicas de manicure. Ao final,
+          você receberá um curso gratuito com dicas avançadas!</p>
+      </section>
+
+      <section class="quiz-container" data-respostas-certas="b,c,a"
+        data-link-curso="../cursos/curso-avancado-nail.html">
+        <h3>🎓 Quiz: teste seu conhecimento</h3>
+
+        <form id="quiz-form">
+          <!-- Pergunta 1 -->
+          <div class="pergunta" data-step="1">
+            <p><strong>1.</strong> Qual técnica é usada para criar uma estrutura resistente e alongada na unha?</p>
+            <label><input type="radio" name="q1" value="a"> Cutilagem profunda</label><br>
+            <label><input type="radio" name="q1" value="b"> Blindagem com esmalte</label><br>
+            <label><input type="radio" name="q1" value="c"> Alongamento com fibra ou gel</label><br><br>
+            <button type="button" class="btn-next">Próxima</button>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="pergunta" data-step="2" style="display:none;">
+            <p><strong>2.</strong> Qual o primeiro passo antes de aplicar qualquer técnica de design de unhas?</p>
+            <label><input type="radio" name="q2" value="a"> Esmaltação nude</label><br>
+            <label><input type="radio" name="q2" value="b"> Preparação da unha natural com higiene e nivelamento</label><br>
+            <label><input type="radio" name="q2" value="c"> Aplicação de primer</label><br><br>
+            <button type="button" class="btn-next">Próxima</button>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="pergunta" data-step="3" style="display:none;">
+            <p><strong>3.</strong> Por que é importante estudar a anatomia da unha antes de atuar como Nail Designer?</p>
+            <label><input type="radio" name="q3" value="a"> Para saber o tamanho ideal da unha</label><br>
+            <label><input type="radio" name="q3" value="b"> Para aplicar técnicas com segurança e evitar danos à unha natural</label><br>
+            <label><input type="radio" name="q3" value="c"> Para cortar corretamente a cutícula</label><br><br>
+            <button type="submit">Finalizar</button>
+          </div>
+        </form>
+
+
+        <div id="resultado-quiz"
+          style="display:none; padding: 2rem; border: 2px solid #ccc; margin-top: 2rem; background-color: #f9f9f9; border-radius: 10px;">
+          <div id="mensagem-resultado"></div>
+
+          <div id="form-captura" style="margin-top: 1rem; display:none;">
+            <h4>💌 Para receber seu curso gratuito, preencha abaixo:</h4>
+            <form id="form-dados">
+              <label>Nome: <input type="text" name="nome" required></label><br><br>
+              <label>E-mail: <input type="email" name="email" required></label><br><br>
+              <button type="submit">Receber curso</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>A Criativa</h2>
+          <p>Estilo e criatividade para empreendedoras de sucesso.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes sociais</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 A Criativa. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+      <div class="footer-bottom">
+        <p>&copy; 2025 A Criativa. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
-  <!-- Scripts -->
-  <script src="/js/menu.js"></script>
+    <!-- Scripts -->
+    <script src="/js/menu.js"></script>
 </body>
+
 </html>
