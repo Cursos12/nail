@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!placeholder || !conteudo) return;
 
-  fetch("../header.html")
+  fetch("/header.html")
     .then(res => res.text())
     .then(data => {
       placeholder.innerHTML = data;
