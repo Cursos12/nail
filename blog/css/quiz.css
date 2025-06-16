@@ -7,15 +7,7 @@
   padding: 1rem;
 }
 
-.blog-meio {
-  max-width: 800px;
-   margin: 2rem auto; /* centraliza horizontalmente e dá espaço vertical */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centraliza conteúdo no eixo horizontal */
-  gap: 16px;
-  padding: 1rem;
-}
+
 
 .quiz-container {
   flex-direction: column;
