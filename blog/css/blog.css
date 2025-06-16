@@ -1,6 +1,7 @@
 .blog-post {
   max-width: 400px;
   margin: 0 auto;
+  margin-top: 2rem;
   padding: 2rem;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.6;
@@ -169,7 +170,7 @@
   flex-direction: column;
   align-items: center; /* centraliza conteúdo no eixo horizontal */
   gap: 16px;
-  padding: 1rem;
+
   background: linear-gradient(90deg, #c084fc 2%, #f472b6 14%, #f472b581 71%); /* roxo + rosa */
   width: 100%;
 }
